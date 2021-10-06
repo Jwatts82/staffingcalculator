@@ -24,13 +24,19 @@ class Events extends Component {
 
     render() {
         return (
-            <div>
+            <div style={eventStyle}>
                 {this.state.events.map(event => (
                     <EventItem key={event.id} event={event}/>
                 ))}
             </div>
         )
     }
+}
+
+const eventStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '1rem'
 }
 
 export default Events
